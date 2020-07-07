@@ -144,7 +144,12 @@ export default {
             if (i === this.files.length - 1) {
               write.end()
 
-              exec(`/home/arish/Workspace/Tools/C++/review_analysis/a.out output ${this.size} ${Date.now()}`, () => {
+              exec(`./analyzer output ${this.size} ${Date.now()}.csv`, (err, out, oerror) => {
+                console.log(err)
+                console.log()
+                console.log(out)
+                console.log()
+                console.log(oerror)
                 this.state.view = false
               })
             }

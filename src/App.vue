@@ -1,15 +1,8 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      [This is Preview Build]
-    </v-app-bar>
-
+    <v-app-bar app dense elevation="0" color="primary"></v-app-bar>
     <v-main>
-      <v-container style="display: flex; justify-content: center">
+      <v-container>
         <files-input />
       </v-container>
     </v-main>
@@ -20,14 +13,19 @@
 import FilesInput from "./components/FilesInput";
 
 export default {
-  name: 'App',
-
   components: {
     FilesInput
-  },
-
-  data: () => ({
-    //
-  }),
-};
+  }
+}
 </script>
+
+<style>
+html {
+  overflow-y: hidden !important;
+}
+
+.container {
+  display: flex !important;
+  justify-content: center !important;
+}
+</style>
